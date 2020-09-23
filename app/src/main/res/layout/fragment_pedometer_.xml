@@ -10,38 +10,43 @@ tools:context=".Pedometer_Fragment">
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/redometer"
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pedometer"
+        android:layout_marginBottom="170dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+       >
 
     </ImageView>
+
     <TextView
         android:id="@+id/ptext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="걸음수"
-        android:textSize="50sp"
-        android:textColor="@android:color/black"
         android:gravity="center"
-        android:layout_marginTop="130dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent">
+        android:text="@string/steps"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image"
+        app:layout_constraintBottom_toBottomOf="@+id/image">
 
     </TextView>
+
     <TextView
         android:id="@+id/walknum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
         android:gravity="center"
         android:text="0"
+        android:layout_marginTop="55dp"
         android:textColor="@android:color/black"
         android:textSize="70sp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ptext"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
@@ -54,20 +59,21 @@ tools:context=".Pedometer_Fragment">
         android:textSize="25sp"
         android:textColor="@android:color/black"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="80dp"
+
         app:layout_constraintTop_toBottomOf="@+id/walknum"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
     </TextView>
 
     <Button
+        android:id="@+id/rewordbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/box"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="135dp"
         android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@+id/walknum"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent">
 
     </Button>
@@ -77,6 +83,9 @@ tools:context=".Pedometer_Fragment">
         android:id="@+id/reset_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="@string/reward"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent">
 

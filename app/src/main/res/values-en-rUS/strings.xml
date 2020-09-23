@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">skt healthy pet</string>
-    <string name="ranking" translatable="false">ranking</string>
-    <string name="dogbutton" translatable="false">dog</string>
-    <string name="catbutton" translatable="false">cat</string>
+    <string name="age" translatable="false">Please enter your age</string>
+    <string name="high" translatable="false">Please enter your height</string>
+    <string name="kg" translatable="false">Please enter your body scale</string>
+    <string name="steps" translatable="false">Number of steps</string>
+    <string name="ranking" translatable="false">Ranking</string>
+    <string name="dogbutton" translatable="false">Dog</string>
+    <string name="catbutton" translatable="false">Cat</string>
     <string name="announce">Notification</string>
     <string name="add">Add</string>
     <string name="sure_delete">Are you sure to delete it?</string>
     <string name="sure_complete">Are you sure to complete it?</string>
-    <string name="ok">ok</string>
+    <string name="ok">Ok</string>
     <string name="cancle">cancle</string>
     <string name="write_here_name">Enter a title here.</string>
     <string name="write_here_content">Enter a content here.</string>
     <string name="isdaily">Do you do it every day?</string>
+    <string name="reward" translatable="false">get rewarded</string>
+    <string name="shop" translatable="false">shop</string>
+    <string name="enterinformation" translatable="false">" Re-enter information"</string>
 </resources>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">skt healthy pet</string>
+    <string name="age" translatable="false">나이를 입력해주세요</string>
+    <string name="high" translatable="false">키를 입력해주세요</string>
+    <string name="kg" translatable="false">몸무계를 입력해주세요</string>
+    <string name="steps" translatable="false">걸음수</string>
     <string name="ranking" translatable="false">랭킹</string>
     <string name="dogbutton" translatable="false">강아지</string>
     <string name="catbutton" translatable="false">고양이</string>
@@ -13,4 +17,7 @@
     <string name="write_here_name">이곳에 제목을 입력하세요</string>
     <string name="write_here_content">이곳에 내용을 입력하세요</string>
     <string name="isdaily">일상 루틴인가요?</string>
+    <string name="enterinformation" translatable="false">정보 다시입력</string>
+    <string name="reward" translatable="false">보상받기</string>
+    <string name="shop" translatable="false">상점</string>
 </resources>
