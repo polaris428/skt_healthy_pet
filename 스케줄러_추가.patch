@@ -1,0 +1,17 @@
+Index: app/src/main/java/com/example/skthealthypet/loding.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/skthealthypet/loding.java	(revision e817ca1675c3fcee06bc75f57b44c045aecf34e1)
++++ app/src/main/java/com/example/skthealthypet/loding.java	(date 1599890597363)
+@@ -21,7 +21,7 @@
+                 Intent intent=new Intent(loding.this,input.class);
+                 startActivity(intent);
+                 finish();}
+-        }, 3000);
++        }, 2000);
+ 
+     }
+ }
+\ No newline at end of file

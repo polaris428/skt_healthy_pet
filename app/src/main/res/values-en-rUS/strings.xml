@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">skt healthy pet</string>
+    <string name="ranking" translatable="false">ranking</string>
+    <string name="dogbutton" translatable="false">dog</string>
+    <string name="catbutton" translatable="false">cat</string>
+    <string name="announce">Notification</string>
+    <string name="add">Add</string>
+    <string name="sure_delete">Are you sure to delete it?</string>
+    <string name="sure_complete">Are you sure to complete it?</string>
+    <string name="ok">ok</string>
+    <string name="cancle">cancle</string>
+    <string name="write_here_name">Enter a title here.</string>
+    <string name="write_here_content">Enter a content here.</string>
+    <string name="isdaily">Do you do it every day?</string>
+</resources>

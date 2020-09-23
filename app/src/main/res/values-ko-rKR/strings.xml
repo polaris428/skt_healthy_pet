@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">skt healthy pet</string>
+    <string name="ranking" translatable="false">랭킹</string>
+    <string name="dogbutton" translatable="false">강아지</string>
+    <string name="catbutton" translatable="false">고양이</string>
+    <string name="announce">알림</string>
+    <string name="add">추가</string>
+    <string name="sure_delete">삭제하시겠습니까?</string>
+    <string name="sure_complete">완료하시겠습니까?</string>
+    <string name="ok">확인</string>
+    <string name="cancle">취소</string>
+    <string name="write_here_name">이곳에 제목을 입력하세요</string>
+    <string name="write_here_content">이곳에 내용을 입력하세요</string>
+    <string name="isdaily">일상 루틴인가요?</string>
+</resources>

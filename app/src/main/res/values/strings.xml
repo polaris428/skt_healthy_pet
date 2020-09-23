@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">skt healthy pet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="enterinformation" translatable="false">정보 다시 입력</string>
+    <string name="ranking" translatable="false">랭킹</string>
+    <string name="shop" translatable="false">상점</string>
+    <string name="dogbutton" translatable="false">ranking</string>
+    <string name="catbutton" translatable="false">cat</string>
+    <string name="announce" translatable="false">알림</string>
+    <string name="add" translatable="false">추가</string>
+    <string name="sure_delete" translatable="false">삭제하시겠습니까?</string>
+    <string name="sure_complete" translatable="false">완료하시겠습니까?</string>
+    <string name="ok" translatable="false">확인</string>
+    <string name="cancle" translatable="false">취소</string>
+    <string name="write_here_name" translatable="false">이곳에 제목을 입력하세요</string>
+    <string name="write_here_content" translatable="false">이곳에 내용을 입력하세요</string>
+    <string name="isdaily" translatable="false">일상 루틴인가요?</string>
+</resources>
