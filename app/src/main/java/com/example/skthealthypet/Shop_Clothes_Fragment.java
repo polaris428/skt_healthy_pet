@@ -20,7 +20,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class Shop_Clothes_Fragment extends ShopValues {
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate (savedInstanceState);
     }
     public Shop_Clothes_Fragment() {
         // Required empty public constructor

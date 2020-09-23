@@ -86,7 +86,7 @@ public class Shop_Beds_Fragment extends ShopValues {
             @Override
             public void onClick(View view) {
                 Shop_Floors_Fragment Shop_Floors_Fragment = new Shop_Floors_Fragment();
-                transaction.replace(R.id.framlayout, Shop_Floors_Fragment).commitAllowingStateLoss();
+                transaction.replace(R.id.framlayout, Shop_Floors_Fragment ).commitAllowingStateLoss();
             }
         });
         Button Go_Walls = v.findViewById(R.id.gotowall);
@@ -94,7 +94,7 @@ public class Shop_Beds_Fragment extends ShopValues {
             @Override
             public void onClick(View view) {
                 Shop_Walls_Fragment Shop_Walls_Fragment = new Shop_Walls_Fragment();
-                transaction.replace(R.id.framlayout, Shop_Walls_Fragment).commitAllowingStateLoss();
+                transaction.replace(R.id.framlayout, Shop_Walls_Fragment ).commitAllowingStateLoss();
             }
         });
         Button Go_Clothes = v.findViewById(R.id.gotocloth);
@@ -118,7 +118,7 @@ public class Shop_Beds_Fragment extends ShopValues {
             @Override
             public void onClick(View view) {
                 Shop_Hats_Fragment Shop_Hats_Fragment = new Shop_Hats_Fragment();
-                transaction.replace(R.id.framlayout, Shop_Hats_Fragment).commitAllowingStateLoss();
+                transaction.replace(R.id.framlayout, Shop_Hats_Fragment ).commitAllowingStateLoss();
             }
         });
 

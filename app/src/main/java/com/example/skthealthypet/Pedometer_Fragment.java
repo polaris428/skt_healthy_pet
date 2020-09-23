@@ -16,6 +16,9 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class Pedometer_Fragment extends Fragment  implements SensorEventListener {
     Button mReset;
@@ -26,10 +29,10 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
     private int mCounterSteps = 0;
 
 
-    //센서 연결을 위한 변수
     private SensorManager sensorManager;
     //private Sensor accelerormeterSensor;
     private Sensor stepCountSensor;
+
 
 
     private View view;
@@ -71,6 +74,7 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
 
             }
         });
+
         return view;
     }
         public void onStart () {
