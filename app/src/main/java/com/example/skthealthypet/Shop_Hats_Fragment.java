@@ -185,20 +185,20 @@ public class Shop_Hats_Fragment extends ShopValues {
         final SharedPreferences pref = mCon.getSharedPreferences("Inventory" , Activity.MODE_PRIVATE);
         final SharedPreferences.Editor editor = pref.edit();
         AlertDialog.Builder dialog = new AlertDialog.Builder(mCon);
-        dialog .setTitle("구매 확인")
-                .setMessage("구매하시겠습까?")
-                .setPositiveButton("예",new DialogInterface.OnClickListener(){
+        dialog .setTitle(getString(R.string.buy))
+                .setMessage(getString(R.string.buy_confirm))
+                .setPositiveButton(getString(R.string.yes),new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog, int which){
                         if(quantity==1) {
                             Toast.makeText(mCon,
-                                    "이미 소지하고 계신 아이템입니다!",
+                                    getString(R.string.already),
                                     Toast.LENGTH_SHORT).show();
                         }
                         else {
                             if (money >= price) {
                                 Toast.makeText(mCon,
-                                        "구매하였습니다.",
+                                        getString(R.string.bought),
                                         Toast.LENGTH_SHORT).show();
                                 money -= price;
                                 editor.putInt("money",money);
@@ -210,17 +210,17 @@ public class Shop_Hats_Fragment extends ShopValues {
                                 //TV.setText("구매 완료");
                             } else {
                                 Toast.makeText(mCon,
-                                        "돈이 부족합니다!",
+                                        getString(R.string.nomoney),
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
                 })
-                .setNegativeButton("아니오",new DialogInterface.OnClickListener(){
+                .setNegativeButton(getString(R.string.no),new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog, int which){
                         Toast.makeText(mCon,
-                                "취소하였습니다.",
+                                getString(R.string.cancelled),
                                 Toast.LENGTH_SHORT).show();
                     }
                 });

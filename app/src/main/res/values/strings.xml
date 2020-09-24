@@ -25,6 +25,13 @@
     <string name="deleted" translatable="false">삭제하였습니다!</string>
     <string name="completed" translatable="false">완료하였습니다!</string>
     <string name="fiilall" translatable="false">모두 채워주세요!</string>
+    <string name="buy" translatable="false">구매</string>
+    <string name="buy_confirm" translatable="false">구매하시겠습까?</string>
+    <string name="yes" translatable="false">예</string>
+    <string name="no" translatable="false">아니오</string>
+    <string name="bought" translatable="false">구매하였습니다!</string>
+    <string name="already" translatable="false">이미 소지하고 계신 아이템입니다!</string>
+    <string name="nomoney" translatable="false">돈이 부족합니다!</string>
 
-    <string name="exercise" translatable="false">헬시펫이 추천하는 이번달의 운동 운동</string>
+    <string name="exercise" translatable="false">헬시펫이 추천하는 운동</string>
 </resources>
