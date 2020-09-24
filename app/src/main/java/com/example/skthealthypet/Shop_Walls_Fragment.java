@@ -39,7 +39,7 @@ public class Shop_Walls_Fragment extends ShopValues {
         final TextView CONTENT_VIEW = v.findViewById(R.id.ContentView);
         final TextView PRICE_VIEW = v.findViewById(R.id.PriceView);
         final ImageView Item_View = v.findViewById(R.id.ItemImage);
-        Button BUY = v.findViewById(R.id.BuyButton);
+        final Button BUY = v.findViewById(R.id.BuyButton);
         final TextView Money_View = v.findViewById(R.id.MoneyView);
         AppCompatImageButton Slot1 =  v.findViewById(R.id.slot1);
         AppCompatImageButton Slot2 =  v.findViewById(R.id.slot2);
@@ -54,6 +54,11 @@ public class Shop_Walls_Fragment extends ShopValues {
                 .asBitmap()
                 .load(R.drawable.w1)
                 .into(Item_View);
+        if(pref.getInt("walls_num_"+0,0)!=0)
+            BUY.setText(getString(R.string.usebtn));
+        else
+            BUY.setText(getString(R.string.buy));
+
         final int [] Number = new int[1];
         Number[0]=0;
         FillChanged(Money_View);
@@ -95,6 +100,10 @@ public class Shop_Walls_Fragment extends ShopValues {
         Slot1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(pref.getInt("walls_num_"+0,0)!=0)
+                    BUY.setText(getString(R.string.usebtn));
+                else
+                    BUY.setText(getString(R.string.buy));
                 Number[0]=0;
                 NAME_VIEW.setText(walls_name[0]);
                 CONTENT_VIEW.setText(walls_content[0]);
@@ -108,6 +117,10 @@ public class Shop_Walls_Fragment extends ShopValues {
         Slot2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(pref.getInt("walls_num_"+1,0)!=0)
+                    BUY.setText(getString(R.string.usebtn));
+                else
+                    BUY.setText(getString(R.string.buy));
                 Number[0]=1;
                 NAME_VIEW.setText(walls_name[1]);
                 CONTENT_VIEW.setText(walls_content[1]);
@@ -121,6 +134,10 @@ public class Shop_Walls_Fragment extends ShopValues {
         Slot3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(pref.getInt("walls_num_"+2,0)!=0)
+                    BUY.setText(getString(R.string.usebtn));
+                else
+                    BUY.setText(getString(R.string.buy));
                 Number[0]=2;
                 NAME_VIEW.setText(walls_name[2]);
                 CONTENT_VIEW.setText(walls_content[2]);
@@ -134,6 +151,10 @@ public class Shop_Walls_Fragment extends ShopValues {
         Slot4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(pref.getInt("walls_num_"+3,0)!=0)
+                    BUY.setText(getString(R.string.usebtn));
+                else
+                    BUY.setText(getString(R.string.buy));
                 Number[0]=3;
                 NAME_VIEW.setText(walls_name[3]);
                 CONTENT_VIEW.setText(walls_content[3]);
@@ -147,6 +168,10 @@ public class Shop_Walls_Fragment extends ShopValues {
         Slot5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(pref.getInt("walls_num_"+4,0)!=0)
+                    BUY.setText(getString(R.string.usebtn));
+                else
+                    BUY.setText(getString(R.string.buy));
                 Number[0]=4;
                 NAME_VIEW.setText(walls_name[4]);
                 CONTENT_VIEW.setText(walls_content[4]);
@@ -156,6 +181,10 @@ public class Shop_Walls_Fragment extends ShopValues {
         Slot6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(pref.getInt("walls_num_"+5,0)!=0)
+                    BUY.setText(getString(R.string.usebtn));
+                else
+                    BUY.setText(getString(R.string.buy));
                 Number[0]=5;
                 NAME_VIEW.setText(walls_name[5]);
                 CONTENT_VIEW.setText(walls_content[5]);
@@ -166,7 +195,7 @@ public class Shop_Walls_Fragment extends ShopValues {
         BUY.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PURCHASE(walls[Number[0]],walls_price[Number[0]],"walls_num_"+Number[0],Money_View);
+                PURCHASE(BUY,walls[Number[0]],walls_price[Number[0]],"walls_num_"+Number[0],Money_View,"walls_num_");
             }
         });
 
@@ -180,51 +209,73 @@ public class Shop_Walls_Fragment extends ShopValues {
         money = pref.getInt("money",0);
         Money_View.setText(String.valueOf(money));
     }
-    private void PURCHASE(final int quantity, final int price, final String method, final TextView Money_View){       // 수량, 가격, 저장이름, 텍스트뷰
+    private void PURCHASE(final Button buy, final int quantity, final int price, final String method, final TextView Money_View, final String pmethod) {       // 수량, 가격, 저장이름, 텍스트뷰
         final Context mCon = getContext();
-        final SharedPreferences pref = mCon.getSharedPreferences("Inventory" , Activity.MODE_PRIVATE);
+        final SharedPreferences pref = mCon.getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
         final SharedPreferences.Editor editor = pref.edit();
         AlertDialog.Builder dialog = new AlertDialog.Builder(mCon);
-        dialog .setTitle(getString(R.string.buy))
-                .setMessage(getString(R.string.buy_confirm))
-                .setPositiveButton(getString(R.string.yes),new DialogInterface.OnClickListener(){
-                    @Override
-                    public void onClick(DialogInterface dialog, int which){
-                        if(quantity==1) {
-                            Toast.makeText(mCon,
-                                    getString(R.string.already),
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                        else {
+        if (quantity == 0) {
+            dialog.setTitle(getString(R.string.buy))
+                    .setMessage(getString(R.string.buy_confirm))
+                    .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
                             if (money >= price) {
                                 Toast.makeText(mCon,
                                         getString(R.string.bought),
                                         Toast.LENGTH_SHORT).show();
                                 money -= price;
-                                editor.putInt("money",money);
+                                editor.putInt("money", money);
                                 editor.commit();
                                 FillChanged(Money_View);
-                                editor.putInt(method,1);
+                                editor.putInt(method, 1);
                                 editor.commit();
                                 FillChanged(Money_View);
-                                //TV.setText("구매 완료");
+                                buy.setText(getString(R.string.usebtn));
                             } else {
                                 Toast.makeText(mCon,
                                         getString(R.string.nomoney),
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
-                    }
-                })
-                .setNegativeButton(getString(R.string.no),new DialogInterface.OnClickListener(){
-                    @Override
-                    public void onClick(DialogInterface dialog, int which){
-                        Toast.makeText(mCon,
-                                getString(R.string.cancelled),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
-        dialog.create();
-        dialog.show();
+                    })
+                    .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(mCon,
+                                    getString(R.string.cancelled),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
+            dialog.create();
+            dialog.show();
+        }
+        else {
+            dialog.setTitle(getString(R.string.announce))
+                    .setMessage(getString(R.string.use))
+                    .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            for(int i=0; i<6; i++){
+                                if(pref.getInt(pmethod+i,0)==2)
+                                    editor.putInt(pmethod+i,1);
+                            }
+                            editor.commit();
+                            editor.putInt(method,2);
+                            editor.commit();
+                            Toast.makeText(mCon, getString(R.string.used), Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(mCon,
+                                    getString(R.string.cancelled),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
+            dialog.create();
+            dialog.show();
+        }
     }
 }
