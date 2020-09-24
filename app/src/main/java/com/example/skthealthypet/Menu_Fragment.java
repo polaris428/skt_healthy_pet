@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class Menu_Fragment extends Fragment {
     private Shop_Clothes_Fragment Shop_Clothes_Fragment=new Shop_Clothes_Fragment();
-
+    private Ranking_Fragment Ranking_Fragment=new Ranking_Fragment();
     public Menu_Fragment() {
         // Required empty public constructor
     }
@@ -38,7 +38,7 @@ public class Menu_Fragment extends Fragment {
         ranking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                transaction.replace(R.id.framlayout,Ranking_Fragment).commitAllowingStateLoss();
             }
         });
 
