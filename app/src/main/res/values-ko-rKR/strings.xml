@@ -20,4 +20,6 @@
     <string name="enterinformation" translatable="false">정보 다시입력</string>
     <string name="reward" translatable="false">보상받기</string>
     <string name="shop" translatable="false">상점</string>
+
+    <string name="exercise" translatable="false">헬시펫이 추천하는 운동</string>
 </resources>

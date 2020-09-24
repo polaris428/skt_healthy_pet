@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case R.id.second:{
                         FragmentTransaction transaction=fm.beginTransaction();
+
                         transaction.replace(R.id.framlayout,Pedometer_Fragment).commitAllowingStateLoss();
                         break;
                     }
