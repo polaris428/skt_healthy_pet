@@ -36,8 +36,7 @@
             android:layout_height="101dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@android:color/white" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/NameView"
@@ -118,20 +117,8 @@
             android:elevation="0dp"
             android:text="Closets"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@id/gotocloth"
-            app:layout_constraintStart_toEndOf="@+id/gotobed"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/gotocloth"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/strokewhite"
-            android:elevation="0dp"
-            android:text="Clothes"
-            android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@id/gotofloor"
-            app:layout_constraintStart_toEndOf="@+id/gotocloset"
+            app:layout_constraintStart_toEndOf="@+id/gotobed"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -143,7 +130,7 @@
             android:text="Floors"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@id/gotohat"
-            app:layout_constraintStart_toEndOf="@+id/gotocloth"
+            app:layout_constraintStart_toEndOf="@+id/gotocloset"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -185,9 +172,9 @@
                 android:id="@+id/slot1"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:backgroundTint="@android:color/white"
                 android:elevation="0dp"
                 android:tint="#FFE4C6"
+                android:background="@drawable/w1"
                 app:layout_constraintBottom_toTopOf="@+id/slot4"
                 app:layout_constraintEnd_toStartOf="@+id/slot2"
                 app:layout_constraintHorizontal_chainStyle="packed"
@@ -199,9 +186,9 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginHorizontal="10dp"
-                android:backgroundTint="@android:color/white"
                 android:elevation="0dp"
                 android:tint="#FFE4C6"
+                android:background="@drawable/w2"
                 app:layout_constraintBottom_toTopOf="@+id/slot5"
                 app:layout_constraintEnd_toStartOf="@+id/slot3"
                 app:layout_constraintStart_toEndOf="@id/slot1"
@@ -211,9 +198,9 @@
                 android:id="@+id/slot3"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:backgroundTint="@android:color/white"
                 android:elevation="0dp"
                 android:tint="#FFE4C6"
+                android:background="@drawable/w3"
                 app:layout_constraintBottom_toTopOf="@+id/slot6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/slot2"
@@ -224,9 +211,9 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginVertical="5dp"
-                android:backgroundTint="@android:color/white"
                 android:elevation="0dp"
                 android:tint="#FFE4C6"
+                android:background="@drawable/w4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/slot1"
                 app:layout_constraintStart_toStartOf="@+id/slot1"

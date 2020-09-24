@@ -17,6 +17,8 @@ import android.widget.Toast;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.bumptech.glide.Glide;
+
 public class Shop_Beds_Fragment extends ShopValues {
     public Shop_Beds_Fragment() {
         // Required empty public constructor
@@ -36,7 +38,6 @@ public class Shop_Beds_Fragment extends ShopValues {
         if (CheckAppFirstExecute()) {
             editor.putInt("money", money);
             for (int i = 0; i < 6; i++) {
-                editor.putInt("clothes_num_" + i, clothes[i]);
                 editor.putInt("hats_num_" + i, hats[i]);
                 editor.putInt("beds_num_" + i, beds[i]);
                 editor.putInt("closets_num_" + i, closets[i]);
@@ -48,7 +49,7 @@ public class Shop_Beds_Fragment extends ShopValues {
         final TextView NAME_VIEW = v.findViewById(R.id.NameView);
         final TextView CONTENT_VIEW = v.findViewById(R.id.ContentView);
         final TextView PRICE_VIEW = v.findViewById(R.id.PriceView);
-        ImageView Item_View = v.findViewById(R.id.ItemImage);
+        final ImageView Item_View = v.findViewById(R.id.ItemImage);
         Button BUY = v.findViewById(R.id.BuyButton);
         final TextView Money_View = v.findViewById(R.id.MoneyView);
         AppCompatImageButton Slot1 = v.findViewById(R.id.slot1);
@@ -60,25 +61,12 @@ public class Shop_Beds_Fragment extends ShopValues {
         NAME_VIEW.setText(beds_name[0]);
         CONTENT_VIEW.setText(beds_content[0]);
         PRICE_VIEW.setText(String.valueOf(beds_price[0]));
+        Glide.with(mCon.getApplicationContext())
+                .asBitmap()
+                .load(R.drawable.bed1)
+                .into(Item_View);
         final int[] Number = new int[1];
         Number[0] = 0;
-//        if( pref.getInt("walls_num_0",0) == 1)
-//            sh1.setText("구매 완료");
-//        else
-//            sh1.setText(walls_price[0]+"코인");
-//        if( pref.getInt("walls_num_1",0) == 1)
-//            sh2.setText("구매 완료");
-//        else
-//            sh2.setText(walls_price[1]+"코인");
-//        if( pref.getInt("walls_num_2",0) == 1)
-//            sh3.setText("구매 완료");
-//        else
-//            sh3.setText(walls_price[2]+"코인");
-//        if( pref.getInt("walls_num_3",0) == 1)
-//            sh4.setText("구매 완료");
-//        else
-//            sh4.setText(walls_price[3]+"코인");
-//
         FillChanged(Money_View);
 
         Button Go_Floors = v.findViewById(R.id.gotofloor);
@@ -95,14 +83,6 @@ public class Shop_Beds_Fragment extends ShopValues {
             public void onClick(View view) {
                 Shop_Walls_Fragment Shop_Walls_Fragment = new Shop_Walls_Fragment();
                 transaction.replace(R.id.framlayout, Shop_Walls_Fragment ).commitAllowingStateLoss();
-            }
-        });
-        Button Go_Clothes = v.findViewById(R.id.gotocloth);
-        Go_Clothes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Shop_Clothes_Fragment Shop_Clothes_Fragment = new Shop_Clothes_Fragment();
-                transaction.replace(R.id.framlayout, Shop_Clothes_Fragment).commitAllowingStateLoss();
             }
         });
         Button Go_Closets = v.findViewById(R.id.gotocloset);
@@ -130,6 +110,10 @@ public class Shop_Beds_Fragment extends ShopValues {
                 NAME_VIEW.setText(beds_name[0]);
                 CONTENT_VIEW.setText(beds_content[0]);
                 PRICE_VIEW.setText(String.valueOf(beds_price[0]));
+                Glide.with(mCon.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.bed1)
+                        .into(Item_View);
             }
         });
         Slot2.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +123,10 @@ public class Shop_Beds_Fragment extends ShopValues {
                 NAME_VIEW.setText(beds_name[1]);
                 CONTENT_VIEW.setText(beds_content[1]);
                 PRICE_VIEW.setText(String.valueOf(beds_price[1]));
+                Glide.with(mCon.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.bed2)
+                        .into(Item_View);
             }
         });
         Slot3.setOnClickListener(new View.OnClickListener() {
@@ -148,6 +136,10 @@ public class Shop_Beds_Fragment extends ShopValues {
                 NAME_VIEW.setText(beds_name[2]);
                 CONTENT_VIEW.setText(beds_content[2]);
                 PRICE_VIEW.setText(String.valueOf(beds_price[2]));
+                Glide.with(mCon.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.bed3)
+                        .into(Item_View);
             }
         });
         Slot4.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +149,10 @@ public class Shop_Beds_Fragment extends ShopValues {
                 NAME_VIEW.setText(beds_name[3]);
                 CONTENT_VIEW.setText(beds_content[3]);
                 PRICE_VIEW.setText(String.valueOf(beds_price[3]));
+                Glide.with(mCon.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.tent1)
+                        .into(Item_View);
             }
         });
         Slot5.setOnClickListener(new View.OnClickListener() {
@@ -166,6 +162,10 @@ public class Shop_Beds_Fragment extends ShopValues {
                 NAME_VIEW.setText(beds_name[4]);
                 CONTENT_VIEW.setText(beds_content[4]);
                 PRICE_VIEW.setText(String.valueOf(beds_price[4]));
+                Glide.with(mCon.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.tent2)
+                        .into(Item_View);
             }
         });
         Slot6.setOnClickListener(new View.OnClickListener() {
@@ -175,6 +175,10 @@ public class Shop_Beds_Fragment extends ShopValues {
                 NAME_VIEW.setText(beds_name[5]);
                 CONTENT_VIEW.setText(beds_content[5]);
                 PRICE_VIEW.setText(String.valueOf(beds_price[5]));
+                Glide.with(mCon.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.tent3)
+                        .into(Item_View);
             }
         });
 

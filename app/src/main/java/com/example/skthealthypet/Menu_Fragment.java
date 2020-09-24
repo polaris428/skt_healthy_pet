@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 public class Menu_Fragment extends Fragment {
-    private Shop_Clothes_Fragment Shop_Clothes_Fragment=new Shop_Clothes_Fragment();
+    private Shop_Beds_Fragment Shop_Beds_Fragment=new Shop_Beds_Fragment();
     private Ranking_Fragment Ranking_Fragment=new Ranking_Fragment();
     public Menu_Fragment() {
         // Required empty public constructor
@@ -45,7 +45,7 @@ public class Menu_Fragment extends Fragment {
         shop.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                transaction.replace(R.id.framlayout,Shop_Clothes_Fragment).commitAllowingStateLoss();
+                transaction.replace(R.id.framlayout,Shop_Beds_Fragment).commitAllowingStateLoss();
             }
         });
         return v;
