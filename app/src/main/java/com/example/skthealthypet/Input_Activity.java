@@ -8,35 +8,13 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class Input_Activity extends AppCompatActivity {
 
     String age;
     String high;
     String kg;
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getHigh() {
-        return high;
-    }
-
-    public void setHigh(String high) {
-        this.high = high;
-    }
-
-    public String getKg() {
-        return kg;
-    }
-
-    public void setKg(String kg) {
-        this.kg = kg;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +27,8 @@ public class Input_Activity extends AppCompatActivity {
         age=ageinput.getText().toString();
         high=heightinput.getText().toString();
         kg=kginput.getText().toString();
+        Pet_Fragment myFragment = new Pet_Fragment();
+
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

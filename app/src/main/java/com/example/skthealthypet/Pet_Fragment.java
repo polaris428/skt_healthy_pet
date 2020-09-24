@@ -9,9 +9,6 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 public class Pet_Fragment extends Fragment {
-
-
-
     public Pet_Fragment() {
         // Required empty public constructor
     }
@@ -23,8 +20,17 @@ public class Pet_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.fragment_pet_,null);
+        String str="";
+
+        Bundle bundle = getArguments();
+
+        if (bundle != null) {
+            str = bundle.getString("pet");
+        }
         TextView agetext=(TextView)v.findViewById(R.id.agetext);
-        agetext.setText(" ");
+        agetext.setText(""+str);
+
+
         return v;
 
     }
