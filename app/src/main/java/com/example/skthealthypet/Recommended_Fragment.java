@@ -1,5 +1,6 @@
 package com.example.skthealthypet;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,8 +39,8 @@ public class Recommended_Fragment extends Fragment {
 
             mRecyclerView = v.findViewById(R.id.recycler_view);
             mRecyclerView.setHasFixedSize(true);
-            //mLayoutManager = new LinearLayoutManager(this);
-            //mRecyclerView.setLayoutManager(mLayoutManager);
+
+
 
             ArrayList<ItemData>itemDataList = new ArrayList<>();
             itemDataList.add(new ItemData("5,000원"));
