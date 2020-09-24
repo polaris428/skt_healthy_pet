@@ -43,21 +43,17 @@ public class Recommended_Fragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        prepareData();
+        setData();
     }
 
     //데이터 준비(최종적으로는 동적으로 추가하거나 삭제할 수 있어야 한다. 이 데이터를 어디에 저장할지 정해야 한다.)
-    private void prepareData() {
-
-        itemList.add(new item("운동1"));
-        itemList.add(new item("운동2"));
-        itemList.add(new item("운동3"));
-        itemList.add(new item("운동4"));
-        itemList.add(new item("운동5"));
-        itemList.add(new item("운동7"));
-        itemList.add(new item("운동8"));
-        itemList.add(new item("운동9"));
-        itemList.add(new item("운동10"));
+    private void setData() {
+        itemList.add(new item("농구"));
+        itemList.add(new item("줄넘기"));
+        itemList.add(new item("수영"));
+        itemList.add(new item("조깅"));
+        itemList.add(new item("스쿼트"));
+        itemList.add(new item("푸쉬업"));
     }
 
 

@@ -11,11 +11,8 @@ public class item {
         this.title = title;
     }
 
-
-
     public item(String name) {
         this.title= name;
-
     }
 
 
