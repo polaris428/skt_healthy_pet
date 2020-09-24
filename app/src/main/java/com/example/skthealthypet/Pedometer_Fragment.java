@@ -62,7 +62,18 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
             // Toast.makeText(this,"No Step Detect Sensor",Toast.LENGTH_SHORT).show();
         }
 
+        mReset = view.findViewById(R.id.reset_btn);
+        mwalknum = view.findViewById(R.id.walknum);
+        //초기화 버튼 : 다시 숫자를 0으로 만들어준다.
+        mReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mSteps = 0;
+                mCounterSteps = 0;
+                mwalknum.setText(Integer.toString(mSteps));
 
+            }
+        });
 
         return view;
     }

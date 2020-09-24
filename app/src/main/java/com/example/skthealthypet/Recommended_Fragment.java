@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
+import androidx.databinding.ObservableArrayList;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class Recommended_Fragment extends Fragment {
 
-    private ArrayList<item> itemList = new ArrayList<>();
+    private ObservableArrayList<item> itemList = new ObservableArrayList<>();
     private RecyclerView recyclerView;
     private aAdapter mAdapter;
 
@@ -26,7 +27,8 @@ public class Recommended_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_recommended_, container, false);
-
+        itemList.clear();
+        prepareData();
         //recyclerview
         recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -38,12 +40,6 @@ public class Recommended_Fragment extends Fragment {
         recyclerView.setAdapter(mAdapter);
 
         return v;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        prepareData();
     }
 
     //데이터 준비(최종적으로는 동적으로 추가하거나 삭제할 수 있어야 한다. 이 데이터를 어디에 저장할지 정해야 한다.)
