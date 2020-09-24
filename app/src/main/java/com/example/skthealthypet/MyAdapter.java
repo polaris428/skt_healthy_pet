@@ -82,7 +82,7 @@ public class MyAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 ListValues OnCom = new ListValues();
-                OnCom.onComplete(myItem.getIsDaily());
+                OnCom.onComplete(myItem.getIsDaily(),position);
             }
         });
 
@@ -101,7 +101,7 @@ public class MyAdapter extends BaseAdapter{
         void onDelete(int Position);
     }
     public interface onItemComplete{
-        void onComplete(boolean isD);
+        void onComplete(boolean isD, int Position);
     }
 
     /* 아이템 데이터 추가를 위한 함수.*/

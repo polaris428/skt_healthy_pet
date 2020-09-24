@@ -17,9 +17,6 @@ public class List_Main_Fragment extends Fragment {
     public List_Main_Fragment() {
         // Required empty public constructor
     }
-    public Object SETMAIN(){
-        return this;
-    }
     public static Context mCon;
     private ListView mListView;
     static int opend=0;
