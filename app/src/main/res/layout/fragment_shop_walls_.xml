@@ -104,7 +104,7 @@
             android:background="@drawable/strokewhite"
             android:elevation="0dp"
             android:text="Beds"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/gotocloset"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -116,7 +116,7 @@
             android:background="@drawable/strokewhite"
             android:elevation="0dp"
             android:text="Closets"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@id/gotofloor"
             app:layout_constraintStart_toEndOf="@+id/gotobed"
             app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +128,7 @@
             android:background="@drawable/strokewhite"
             android:elevation="0dp"
             android:text="Floors"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@id/gotohat"
             app:layout_constraintStart_toEndOf="@+id/gotocloset"
             app:layout_constraintTop_toTopOf="parent" />
@@ -140,7 +140,7 @@
             android:background="@drawable/strokewhite"
             android:elevation="0dp"
             android:text="Hats"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@id/gotowall"
             app:layout_constraintStart_toEndOf="@+id/gotofloor"
             app:layout_constraintTop_toTopOf="parent" />
@@ -152,7 +152,7 @@
             android:background="@drawable/strokedark"
             android:elevation="0dp"
             android:text="Walls"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/gotohat"
             app:layout_constraintTop_toTopOf="parent" />
