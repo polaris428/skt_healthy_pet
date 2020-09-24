@@ -22,13 +22,9 @@ public class Pet_Fragment extends Fragment {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.fragment_pet_,null);
         String str="";
 
-        Bundle bundle = getArguments();
 
-        if (bundle != null) {
-            str = bundle.getString("pet");
-        }
-        TextView agetext=(TextView)v.findViewById(R.id.agetext);
-        agetext.setText(""+str);
+
+
 
 
         return v;
