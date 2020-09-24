@@ -41,7 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
 
         <Button
             android:layout_width="wrap_content"
@@ -49,15 +50,19 @@
             android:text="@string/ok"
             android:textSize="20sp"
             android:id="@+id/okBtn"
-            android:onClick="mOk"/>
+            android:background="@drawable/ok_or_cancle_btn"
+            android:onClick="mOk"
+            android:layout_marginRight="5dp"/>
 
         <Button
             android:id="@+id/cancleBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="mCancle"
-            android:text="@string/cancle"
-            android:textSize="20sp" />
+            android:text="@string/cancel"
+            android:background="@drawable/ok_or_cancle_btn"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"/>
 
     </LinearLayout>
 </LinearLayout>

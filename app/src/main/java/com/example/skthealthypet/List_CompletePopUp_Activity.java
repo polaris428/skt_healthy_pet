@@ -27,7 +27,7 @@ public class List_CompletePopUp_Activity extends AppCompatActivity {
     }
 
     public void mOk(View v){
-        Toast.makeText(this, "완료하였습니다!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.completed), Toast.LENGTH_SHORT).show();
         if(ListValues.IS==false) {
             ListValues.mMyAdapter.deleteItem(ListValues.possi);
             ListValues.mMyAdapter.notifyDataSetChanged();
@@ -58,7 +58,7 @@ public class List_CompletePopUp_Activity extends AppCompatActivity {
 
     }
     public void mCancle(View v){
-        Toast.makeText(this, "취소하였습니다!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.cancelled), Toast.LENGTH_SHORT).show();
         finish();
     }
     @Override

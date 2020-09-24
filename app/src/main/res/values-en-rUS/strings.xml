@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">skt healthy pet</string>
-    <string name="age" translatable="false">Please enter your age</string>
-    <string name="high" translatable="false">Please enter your height</string>
-    <string name="kg" translatable="false">Please enter your body scale</string>
+    <string name="age" translatable="false">Enter your age here</string>
+    <string name="high" translatable="false">Enter your height here</string>
+    <string name="kg" translatable="false">Enter your weight here</string>
     <string name="steps" translatable="false">Number of steps</string>
     <string name="ranking" translatable="false">Ranking</string>
     <string name="dogbutton" translatable="false">Dog</string>
     <string name="catbutton" translatable="false">Cat</string>
-    <string name="announce">Notification</string>
-    <string name="add">Add</string>
-    <string name="sure_delete">Are you sure to delete it?</string>
-    <string name="sure_complete">Are you sure to complete it?</string>
-    <string name="ok">Ok</string>
-    <string name="cancle">cancle</string>
-    <string name="write_here_name">Enter a title here.</string>
-    <string name="write_here_content">Enter a content here.</string>
-    <string name="isdaily">Do you do it every day?</string>
+    <string name="announce" translatable="false">Notification</string>
+    <string name="add" translatable="false">Add</string>
+    <string name="sure_delete" translatable="false">Are you sure to delete it?</string>
+    <string name="sure_complete" translatable="false">Are you sure to complete it?</string>
+    <string name="ok" translatable="false">Ok</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="write_here_name" translatable="false">Enter a title here</string>
+    <string name="write_here_content" translatable="false">Enter a content here</string>
+    <string name="isdaily" translatable="false">Do you do it every day?</string>
     <string name="reward" translatable="false">get rewarded</string>
     <string name="shop" translatable="false">shop</string>
     <string name="enterinformation" translatable="false">" Re-enter information"</string>
+    <string name="added" translatable="false">Added!</string>
+    <string name="cancelled" translatable="false">Cancelled!</string>
+    <string name="deleted" translatable="false">Deleted!</string>
+    <string name="completed" translatable="false">Completed!</string>
+    <string name="fiilall" translatable="false">Fill it all up!</string>
 
     <string name="exercise" translatable="false">This month is exercise recommended by Healthy Pet </string>
 </resources>

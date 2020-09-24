@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/titleTV"
-            android:text="운동 추가"
+            android:text="@string/add"
             android:textSize="28sp"
             android:gravity="center"
             android:textColor="#fff"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000"
-            android:hint="이곳에 제목을 입력하세요"
+            android:hint="@string/write_here_name"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_marginBottom="3dp"/>
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000"
-            android:hint="이곳에 내용을 입력하세요"
+            android:hint="@string/write_here_content"
             android:gravity="center"
             android:layout_marginBottom="3dp"/>
         <LinearLayout
@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="일상 루틴인가요?"
+                android:text="@string/isdaily"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textColor="#000"/>
@@ -68,23 +68,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="확인"
+            android:text="@string/ok"
             android:textSize="20sp"
             android:id="@+id/okBtn"
-            android:onClick="m1Ok"/>
+            android:background="@drawable/ok_or_cancle_btn"
+            android:onClick="m1Ok"
+            android:layout_marginRight="5dp"/>
 
         <Button
             android:id="@+id/cancleBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="m1Cancle"
-            android:text="취소"
-            android:textSize="20sp" />
+            android:text="@string/cancel"
+            android:background="@drawable/ok_or_cancle_btn"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"/>
 
     </LinearLayout>
 </LinearLayout>
