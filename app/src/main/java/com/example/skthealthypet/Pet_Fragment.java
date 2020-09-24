@@ -1,5 +1,8 @@
 package com.example.skthealthypet;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,8 +24,10 @@ public class Pet_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.fragment_pet_,null);
         String str="";
-
-
+        Context c = container.getContext();
+        SharedPreferences pref = c.getSharedPreferences("Inventory" , Activity.MODE_PRIVATE);
+        TextView MONEY_VIEW = v.findViewById(R.id.cointext);
+        MONEY_VIEW.setText(String.valueOf(pref.getInt("money",0)));
 
 
 
