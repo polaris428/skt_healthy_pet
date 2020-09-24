@@ -50,11 +50,6 @@ public class aAdapter extends RecyclerView.Adapter<aAdapter.MyViewHolder>{
 
     }
 
-
-
-
-
-
     @Override
     public int getItemCount() {
         return mDataset.size();

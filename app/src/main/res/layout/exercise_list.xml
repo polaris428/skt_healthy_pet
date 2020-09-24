@@ -18,8 +18,9 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
+        android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="@+id/image"
         app:layout_constraintRight_toRightOf="@+id/image"
         app:layout_constraintTop_toTopOf="@id/img">
