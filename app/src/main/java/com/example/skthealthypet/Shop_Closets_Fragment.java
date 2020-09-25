@@ -38,7 +38,6 @@ public class Shop_Closets_Fragment extends ShopValues {
         final TextView PRICE_VIEW = v.findViewById(R.id.PriceView);
         final ImageView Item_View = v.findViewById(R.id.ItemImage);
         final Button BUY = v.findViewById(R.id.BuyButton);
-        final TextView Money_View = v.findViewById(R.id.MoneyView);
         AppCompatImageButton Slot1 = v.findViewById(R.id.slot1);
         AppCompatImageButton Slot2 = v.findViewById(R.id.slot2);
         AppCompatImageButton Slot3 = v.findViewById(R.id.slot3);
@@ -59,7 +58,7 @@ public class Shop_Closets_Fragment extends ShopValues {
 
         final int[] Number = new int[1];
         Number[0] = 0;
-        FillChanged(Money_View);
+        FillChanged();
 
         Button Go_Floors = v.findViewById(R.id.gotofloor);
         Go_Floors.setOnClickListener(new View.OnClickListener() {
@@ -197,22 +196,21 @@ public class Shop_Closets_Fragment extends ShopValues {
         BUY.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PURCHASE(BUY,closets[Number[0]], closets_price[Number[0]], "closets_num_" + Number[0], Money_View,"closets_num_");
+                PURCHASE(BUY,closets[Number[0]], closets_price[Number[0]], "closets_num_" + Number[0], "closets_num_");
             }
         });
         return v;
     }
 
-    private void FillChanged(final TextView Money_View) {
+    private void FillChanged() {
         final Context mCon = getContext();
         SharedPreferences pref = mCon.getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
         for (int i = 0; i < 6; i++)
             closets[i] = pref.getInt("closets_num_" + i, 0);
         money = pref.getInt("money", 0);
-        Money_View.setText(String.valueOf(money));
     }
 
-    private void PURCHASE(final Button buy, final int quantity, final int price, final String method, final TextView Money_View, final String pmethod) {       // 수량, 가격, 저장이름, 텍스트뷰
+    private void PURCHASE(final Button buy, final int quantity, final int price, final String method, final String pmethod) {       // 수량, 가격, 저장이름, 텍스트뷰
         final Context mCon = getContext();
         final SharedPreferences pref = mCon.getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
         final SharedPreferences.Editor editor = pref.edit();
@@ -230,10 +228,10 @@ public class Shop_Closets_Fragment extends ShopValues {
                                 money -= price;
                                 editor.putInt("money", money);
                                 editor.commit();
-                                FillChanged(Money_View);
+                                FillChanged();
                                 editor.putInt(method, 1);
                                 editor.commit();
-                                FillChanged(Money_View);
+                                FillChanged();
                                 buy.setText(getString(R.string.usebtn));
                             } else {
                                 Toast.makeText(mCon,

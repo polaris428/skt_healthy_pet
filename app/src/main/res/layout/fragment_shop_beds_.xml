@@ -7,18 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".Shop_Beds_Fragment">
 
-    <TextView
-        android:id="@+id/MoneyView"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"

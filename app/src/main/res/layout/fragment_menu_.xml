@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu_Fragment">
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
+            android:padding="60dp"
             android:id="@+id/profile"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/logo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="500dp">
-        </ImageView>
+            android:layout_marginBottom="500dp"/>
 
         <Button
+            android:padding="15dp"
             android:id="@+id/enterinformation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,18 +37,29 @@
             android:layout_centerInParent="true"
             android:background="#000000"
             app:layout_constraintTop_toBottomOf="@+id/enterinformation"/>
+
         <Button
             android:id="@+id/ranking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
-            android:text="@string/ranking"
             android:gravity="left"
+            android:padding="15dp"
+            android:text="@string/ranking"
             android:textSize="25sp"
             app:layout_constraintTop_toBottomOf="@id/line1">
 
         </Button>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_centerInParent="true"
+            android:background="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/ranking" />
         <Button
+            android:padding="15dp"
             android:id="@+id/shop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,7 +67,7 @@
             android:textSize="25sp"
             android:gravity="left"
             android:background="#ffffff"
-            app:layout_constraintTop_toBottomOf="@+id/ranking">
+            app:layout_constraintTop_toBottomOf="@+id/line2">
 
 
         </Button>
