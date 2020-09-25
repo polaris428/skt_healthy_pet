@@ -52,7 +52,8 @@ public class List_CompletePopUp_Activity extends AppCompatActivity {
         }
         final SharedPreferences p = getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
         final SharedPreferences.Editor e = p.edit();
-        e.putInt("money", p.getInt("money", 0)+10000);
+        e.putInt("money", p.getInt("money", 0)+3);
+        e.putInt("exp",p.getInt("exp",0)+1);
         e.commit();
         finish();
 

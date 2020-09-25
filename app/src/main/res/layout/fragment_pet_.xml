@@ -28,8 +28,8 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
-            android:text="11 1000/10000"
             android:gravity="center"
+            android:id="@+id/info"
             android:background="@drawable/xpbar"
             android:textColor="@android:color/black"
             android:layout_marginLeft="220dp"
@@ -56,7 +56,6 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
-            android:text="현재 소지금액"
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:background="@drawable/coins"
@@ -79,58 +78,47 @@
 
         </ImageView>
 
-               <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="220dp"
-            android:background="@drawable/clock"
-            app:layout_constraintHorizontal_bias="0.0"
+
+        <ImageView
+            android:id="@+id/GAGU"
+            android:layout_width="230dp"
+            android:layout_height="340dp"
+            app:layout_constraintBottom_toBottomOf="@+id/home"
+            app:layout_constraintEnd_toEndOf="@+id/home"
+            app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintStart_toStartOf="@+id/home"
+            app:layout_constraintTop_toTopOf="@+id/home"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/BED"
+            app:layout_constraintBottom_toBottomOf="@+id/home"
+            app:layout_constraintEnd_toEndOf="@+id/home"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/home"
+            app:layout_constraintVertical_bias="1.0">
 
         </ImageView>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="330dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/closet"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </ImageView>
-
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bed1"
-            android:layout_marginTop="500dp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginBottom="50dp"
-            android:layout_marginRight="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </ImageView>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:src="@drawable/dog2"
-            android:layout_marginTop="500dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
+            app:layout_constraintBottom_toBottomOf="@+id/home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/home"
+            app:layout_constraintVertical_bias="1.0">
 
         </ImageView>
 

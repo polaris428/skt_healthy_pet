@@ -157,6 +157,10 @@ public class Shop_Closets_Fragment extends ShopValues {
                 NAME_VIEW.setText(closets_name[3]);
                 CONTENT_VIEW.setText(closets_content[3]);
                 PRICE_VIEW.setText(String.valueOf(closets_price[3]));
+                Glide.with(mCon.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.clock)
+                        .into(Item_View);
             }
         });
         Slot5.setOnClickListener(new View.OnClickListener() {
@@ -170,6 +174,10 @@ public class Shop_Closets_Fragment extends ShopValues {
                 NAME_VIEW.setText(closets_name[4]);
                 CONTENT_VIEW.setText(closets_content[4]);
                 PRICE_VIEW.setText(String.valueOf(closets_price[4]));
+                Glide.with(mCon.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.clock_elec)
+                        .into(Item_View);
             }
         });
         Slot6.setOnClickListener(new View.OnClickListener() {
