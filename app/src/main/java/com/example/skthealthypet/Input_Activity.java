@@ -14,7 +14,7 @@ public class Input_Activity extends AppCompatActivity {
     String age;
     String high;
     String kg;
-
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +23,12 @@ public class Input_Activity extends AppCompatActivity {
         final EditText ageinput=(EditText)findViewById(R.id.ageinput);
         final  EditText heightinput=(EditText) findViewById(R.id.heightinput);
         final EditText kginput=(EditText)findViewById(R.id.kginput);
+        final EditText nameinput=findViewById(R.id.nameinput);
         Button complete=(Button)findViewById(R.id.complete);
         age=ageinput.getText().toString();
         high=heightinput.getText().toString();
         kg=kginput.getText().toString();
+        name=nameinput.getText().toString();
         Pet_Fragment myFragment = new Pet_Fragment();
 
         complete.setOnClickListener(new View.OnClickListener() {
