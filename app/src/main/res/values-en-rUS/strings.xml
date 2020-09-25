@@ -39,4 +39,10 @@
     <string name="usebtn" translatable="false">Use</string>
 
     <string name="exercise" translatable="false">Exercise recommended by HEALTY PET</string>
+    <string name="squat" translatable="false">Squat</string>
+    <string name="pushup" translatable="false">Push-up</string>
+    <string name="plank" translatable="false">Plank</string>
+    <string name="walking" translatable="false">Walking(Noise Caution)</string>
+    <string name="lunge" translatable="false">Lunge</string>
+    <string name="burpee" translatable="false">burpee(Noise Caution)</string>
 </resources>

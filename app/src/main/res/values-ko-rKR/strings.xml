@@ -39,4 +39,10 @@
     <string name="usebtn" translatable="false">적용</string>
 
     <string name="exercise" translatable="false">헬시펫이 추천하는 운동</string>
+    <string name="squat" translatable="false">스쿼트</string>
+    <string name="pushup" translatable="false">팔굽혀펴기</string>
+    <string name="plank" translatable="false">플랭크</string>
+    <string name="walking" translatable="false">걷기(소음주의)</string>
+    <string name="lunge" translatable="false">런지</string>
+    <string name="burpee" translatable="false">버피(소음주의)</string>
 </resources>
