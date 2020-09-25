@@ -21,6 +21,7 @@ public class Choice_Activity extends AppCompatActivity {
         SharedPreferences pref2 = getSharedPreferences("IsFirst" , Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor2 = pref2.edit();
         final SharedPreferences.Editor editor = pref.edit();
+
         chosedog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -3,6 +3,7 @@ import androidx.fragment.app.Fragment;
 
 public class ShopValues extends Fragment {
     public int money = 0;
+
     public int[] hats = {0,0,0,0,0,0};
     public int[] beds = {0,0,0,0,0,0};
     public int[] closets = {0,0,0,0,0,0};
