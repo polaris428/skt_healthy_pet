@@ -5,72 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu_Fragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
-            android:padding="60dp"
             android:id="@+id/profile"
-            android:src="@drawable/logo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="500dp"/>
+            android:layout_marginBottom="500dp"
+            android:padding="60dp"
+            android:src="@drawable/logo" />
 
         <Button
-            android:padding="15dp"
             android:id="@+id/enterinformation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
+            android:background="@drawable/menubtn"
+            android:fontFamily="@font/apple_sd_gothic_neo_r"
+            android:gravity="left"
+            android:padding="15dp"
             android:text="@string/enterinformation"
             android:textSize="25sp"
-            android:gravity="left"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile"
-            app:layout_constraintLeft_toRightOf="parent">
-
-        </Button>
-        <View
-            android:id="@+id/line1"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_centerInParent="true"
-            android:background="#000000"
-            app:layout_constraintTop_toBottomOf="@+id/enterinformation"/>
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile" />
 
         <Button
             android:id="@+id/ranking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
+            android:background="@drawable/menubtn"
+            android:fontFamily="@font/apple_sd_gothic_neo_r"
             android:gravity="left"
             android:padding="15dp"
             android:text="@string/ranking"
             android:textSize="25sp"
-            app:layout_constraintTop_toBottomOf="@id/line1">
+            app:layout_constraintTop_toBottomOf="@id/enterinformation" />
 
-        </Button>
-
-        <View
-            android:id="@+id/line2"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_centerInParent="true"
-            android:background="#000000"
-            app:layout_constraintBottom_toBottomOf="@+id/ranking" />
         <Button
-            android:padding="15dp"
             android:id="@+id/shop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/menubtn"
+            android:fontFamily="@font/apple_sd_gothic_neo_r"
+            android:gravity="left"
+            android:padding="15dp"
             android:text="@string/shop"
             android:textSize="25sp"
-            android:gravity="left"
-            android:background="#ffffff"
-            app:layout_constraintTop_toBottomOf="@+id/line2">
-
-
-        </Button>
+            app:layout_constraintTop_toBottomOf="@+id/ranking" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!-- TODO: Update blank fragment layout -->

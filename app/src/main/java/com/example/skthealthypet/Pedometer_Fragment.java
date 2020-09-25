@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -23,7 +24,7 @@ import java.util.Date;
 
 
 public class Pedometer_Fragment extends Fragment  implements SensorEventListener {
-    Button mReset;
+    ImageButton mReset;
     TextView mwalknum;
     //현재 걸음 수
     private int mSteps = 0;

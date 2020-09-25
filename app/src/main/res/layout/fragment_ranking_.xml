@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:divider="#000000"
         android:dividerHeight="1px"
-        android:divider="#000000">
-    </ListView>
+        android:fontFamily="@font/apple_sd_gothic_neo_r"/>
 
 </RelativeLayout>
