@@ -33,19 +33,7 @@ public class Shop_Beds_Fragment extends ShopValues {
         final FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         final Context mCon = getContext();
         final SharedPreferences pref = mCon.getSharedPreferences("Inventory" , Activity.MODE_PRIVATE);
-
         final SharedPreferences.Editor editor = pref.edit();
-        if (CheckAppFirstExecute()) {
-            editor.putInt("money", money);
-            for (int i = 0; i < 6; i++) {
-                editor.putInt("hats_num_" + i, hats[i]);
-                editor.putInt("beds_num_" + i, beds[i]);
-                editor.putInt("closets_num_" + i, closets[i]);
-                editor.putInt("walls_num_" + i, walls[i]);
-                editor.putInt("floors_num_" + i, floors[i]);
-            }
-            editor.commit();
-        }
         final TextView NAME_VIEW = v.findViewById(R.id.NameView);
         final TextView CONTENT_VIEW = v.findViewById(R.id.ContentView);
         final TextView PRICE_VIEW = v.findViewById(R.id.PriceView);
@@ -295,16 +283,5 @@ public class Shop_Beds_Fragment extends ShopValues {
             dialog.create();
             dialog.show();
         }
-    }
-    public boolean CheckAppFirstExecute(){
-        final Context mCon=getContext();
-        SharedPreferences pref = mCon.getSharedPreferences("IsFirst" , Activity.MODE_PRIVATE);
-        boolean isFirst = pref.getBoolean("isFirst", false);
-        if(!isFirst){ //최초 실행시 true 저장
-            SharedPreferences.Editor editor = pref.edit();
-            editor.putBoolean("isFirst", true);
-            editor.commit();
-        }
-        return !isFirst;
     }
 }

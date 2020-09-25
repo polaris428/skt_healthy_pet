@@ -50,11 +50,14 @@ public class List_CompletePopUp_Activity extends AppCompatActivity {
             editor.putInt("Index", pref.getInt("Index", 0) - 1);
             editor.commit();
         }
-        final SharedPreferences p = getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
-        final SharedPreferences.Editor e = p.edit();
+        SharedPreferences p = getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor e = p.edit();
+        SharedPreferences p2 = getSharedPreferences("Infomation", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor e2 = p2.edit();
         e.putInt("money", p.getInt("money", 0)+3);
-        e.putInt("exp",p.getInt("exp",0)+1);
+        e2.putInt("exp",p2.getInt("exp",0)+1);
         e.commit();
+        e2.commit();
         finish();
 
     }

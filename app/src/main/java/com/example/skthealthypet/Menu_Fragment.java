@@ -10,8 +10,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 public class Menu_Fragment extends Fragment {
-    private Shop_Beds_Fragment Shop_Beds_Fragment=new Shop_Beds_Fragment();
-    private Ranking_Fragment Ranking_Fragment=new Ranking_Fragment();
     public Menu_Fragment() {
         // Required empty public constructor
     }
@@ -31,13 +29,15 @@ public class Menu_Fragment extends Fragment {
         enterinformation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ReInput_Fragment ReInput_Fragment=new ReInput_Fragment();
+                transaction.replace(R.id.framlayout,ReInput_Fragment).commitAllowingStateLoss();
             }
         });
 
         ranking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Ranking_Fragment Ranking_Fragment=new Ranking_Fragment();
                 transaction.replace(R.id.framlayout,Ranking_Fragment).commitAllowingStateLoss();
             }
         });
@@ -45,6 +45,7 @@ public class Menu_Fragment extends Fragment {
         shop.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+                Shop_Beds_Fragment Shop_Beds_Fragment=new Shop_Beds_Fragment();
                 transaction.replace(R.id.framlayout,Shop_Beds_Fragment).commitAllowingStateLoss();
             }
         });

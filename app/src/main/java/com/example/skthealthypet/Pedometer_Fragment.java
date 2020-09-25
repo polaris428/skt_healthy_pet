@@ -72,9 +72,12 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
             public void onClick(View v) {
                 final SharedPreferences p = container.getContext().getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
                 final SharedPreferences.Editor e = p.edit();
+                final SharedPreferences p2 = container.getContext().getSharedPreferences("Infomation", Activity.MODE_PRIVATE);
+                final SharedPreferences.Editor e2 = p2.edit();
                 e.putInt("money", p.getInt("money", 0)+mSteps/10);
-                e.putInt("exp",p.getInt("exp",0)+mSteps/50);
+                e2.putInt("exp",p2.getInt("exp",0)+mSteps/50);
                 e.commit();
+                e2.commit();
                 mSteps = 0;
                 mCounterSteps = 0;
                 mwalknum.setText(Integer.toString(mSteps));

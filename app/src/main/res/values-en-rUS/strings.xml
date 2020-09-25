@@ -45,4 +45,6 @@
     <string name="walking" translatable="false">Walking(Noise Caution)</string>
     <string name="lunge" translatable="false">Lunge</string>
     <string name="burpee" translatable="false">burpee(Noise Caution)</string>
+
+    <string name="StringValue" translatable="false">Image won\'t open.</string>
 </resources>

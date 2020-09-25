@@ -19,12 +19,10 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/dogname"
             android:gravity="center"
-            android:text="헬시펫"
+            android:text=""
             android:textColor="#000000"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="15dp">
-
-        </TextView>
+            tools:layout_editor_absoluteX="15dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -37,12 +35,10 @@
             android:layout_marginLeft="220dp"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/petname"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-            >
-
-        </TextView>
         <ImageView
+            android:contentDescription="StringValue"
             android:id="@+id/coin"
             android:layout_width="50dp"
             android:layout_height="45dp"
@@ -67,6 +63,7 @@
 
         </TextView>
         <ImageView
+            android:contentDescription="StringValue"
             android:id="@+id/home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -82,6 +79,7 @@
 
 
         <ImageView
+            android:contentDescription="StringValue"
             android:id="@+id/GAGU"
             android:layout_width="210dp"
             android:layout_height="306dp"
@@ -97,6 +95,7 @@
         </ImageView>
 
         <ImageView
+            android:contentDescription="StringValue"
             android:id="@+id/BED"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -112,10 +111,11 @@
         </ImageView>
 
         <ImageView
+            android:contentDescription="StringValue"
             android:layout_marginBottom="20dp"
             android:layout_width="249dp"
             android:layout_height="256dp"
-            android:src="@drawable/dog2"
+            android:id="@+id/Pet"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.913"
