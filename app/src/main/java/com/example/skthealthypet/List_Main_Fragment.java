@@ -46,7 +46,7 @@ public class List_Main_Fragment extends Fragment {
         dataSetting();
         Button btn = (Button) v.findViewById(R.id.add);
         btn.setOnClickListener(this::pressAddBtn);
-        v.findViewById(R.id.feb_list_main).setOnClickListener(view -> startActivity(new Intent(mCon, FireStoreTestActivity.class)));
+        v.findViewById(R.id.feb_list_main).setOnClickListener(this::pressAddBtn);
 
         return v;
     }
