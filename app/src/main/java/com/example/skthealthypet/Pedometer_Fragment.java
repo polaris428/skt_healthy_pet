@@ -1,6 +1,8 @@
 package com.example.skthealthypet;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -68,10 +70,14 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
         mReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final SharedPreferences p = container.getContext().getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
+                final SharedPreferences.Editor e = p.edit();
+                e.putInt("money", p.getInt("money", 0)+mSteps/10);
+                e.putInt("exp",p.getInt("exp",0)+mSteps/50);
+                e.commit();
                 mSteps = 0;
                 mCounterSteps = 0;
                 mwalknum.setText(Integer.toString(mSteps));
-
             }
         });
 
@@ -80,7 +86,6 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
         public void onStart () {
             super.onStart();
             if (stepCountSensor != null) {
-
                 sensorManager.registerListener(this,stepCountSensor,SensorManager.SENSOR_DELAY_GAME);
             }
         }
@@ -91,12 +96,6 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
                 sensorManager.unregisterListener(this);
             }
         }
-
-
-
-
-
-
 
 
     @Override
