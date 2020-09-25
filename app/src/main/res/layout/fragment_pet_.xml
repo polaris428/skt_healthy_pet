@@ -14,17 +14,18 @@
 
         <TextView
             android:id="@+id/petname"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginRight="210dp"
+            android:layout_width="183dp"
+            android:layout_height="81dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/dogname"
             android:gravity="center"
             android:text="대충 이름"
-            android:layout_marginTop="20dp"
             android:textColor="#000000"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="15dp">
 
         </TextView>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -111,15 +112,14 @@
         </ImageView>
 
         <ImageView
-            android:layout_width="189dp"
-            android:layout_height="361dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="249dp"
+            android:layout_height="256dp"
             android:src="@drawable/dog2"
-            app:layout_constraintBottom_toBottomOf="@+id/home"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.956"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/home"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintHorizontal_bias="0.913"
+            app:layout_constraintStart_toStartOf="parent">
 
         </ImageView>
 
