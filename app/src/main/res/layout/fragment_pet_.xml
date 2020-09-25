@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Pet_Fragment"
-    android:padding="10dp">
+    tools:context=".Pet_Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -81,41 +82,41 @@
 
         <ImageView
             android:id="@+id/GAGU"
-            android:layout_width="230dp"
-            android:layout_height="340dp"
+            android:layout_width="210dp"
+            android:layout_height="306dp"
             app:layout_constraintBottom_toBottomOf="@+id/home"
             app:layout_constraintEnd_toEndOf="@+id/home"
-            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintHorizontal_bias="0.139"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="@+id/home"
             app:layout_constraintTop_toTopOf="@+id/home"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintVertical_bias="0.132">
 
         </ImageView>
 
         <ImageView
+            android:id="@+id/BED"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:id="@+id/BED"
             app:layout_constraintBottom_toBottomOf="@+id/home"
             app:layout_constraintEnd_toEndOf="@+id/home"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.954"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/home"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="0.963">
 
         </ImageView>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="189dp"
+            android:layout_height="361dp"
             android:src="@drawable/dog2"
             app:layout_constraintBottom_toBottomOf="@+id/home"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.956"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/home"
             app:layout_constraintVertical_bias="1.0">
