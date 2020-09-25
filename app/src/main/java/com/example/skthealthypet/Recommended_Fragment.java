@@ -45,12 +45,12 @@ public class Recommended_Fragment extends Fragment {
     //데이터 준비(최종적으로는 동적으로 추가하거나 삭제할 수 있어야 한다. 이 데이터를 어디에 저장할지 정해야 한다.)
     private void prepareData() {
 
-        itemList.add(new item("농구"));
-        itemList.add(new item("줄넘기"));
-        itemList.add(new item("수영"));
-        itemList.add(new item("조깅"));
-        itemList.add(new item("스쿼트"));
-        itemList.add(new item("푸쉬업"));
+        itemList.add(new item(getString(R.string.squat)));
+        itemList.add(new item(getString(R.string.pushup)));
+        itemList.add(new item(getString(R.string.plank)));
+        itemList.add(new item(getString(R.string.walking)));
+        itemList.add(new item(getString(R.string.lunge)));
+        itemList.add(new item(getString(R.string.burpee)));
     }
 
 
