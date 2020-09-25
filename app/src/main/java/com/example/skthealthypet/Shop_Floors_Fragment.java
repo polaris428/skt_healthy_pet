@@ -165,32 +165,32 @@ public class Shop_Floors_Fragment extends ShopValues {
                         .into(Item_View);
             }
         });
-        Slot5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(pref.getInt("floors_num_"+4,0)!=0)
-                    BUY.setText(getString(R.string.usebtn));
-                else
-                    BUY.setText(getString(R.string.buy));
-                Number[0] = 4;
-                NAME_VIEW.setText(floors_name[4]);
-                CONTENT_VIEW.setText(floors_content[4]);
-                PRICE_VIEW.setText(String.valueOf(floors_price[4]));
-            }
-        });
-        Slot6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(pref.getInt("floors_num_"+5,0)!=0)
-                    BUY.setText(getString(R.string.usebtn));
-                else
-                    BUY.setText(getString(R.string.buy));
-                Number[0] = 5;
-                NAME_VIEW.setText(floors_name[5]);
-                CONTENT_VIEW.setText(floors_content[5]);
-                PRICE_VIEW.setText(String.valueOf(floors_price[5]));
-            }
-        });
+//        Slot5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(pref.getInt("floors_num_"+4,0)!=0)
+//                    BUY.setText(getString(R.string.usebtn));
+//                else
+//                    BUY.setText(getString(R.string.buy));
+//                Number[0] = 4;
+//                NAME_VIEW.setText(floors_name[4]);
+//                CONTENT_VIEW.setText(floors_content[4]);
+//                PRICE_VIEW.setText(String.valueOf(floors_price[4]));
+//            }
+//        });
+//        Slot6.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(pref.getInt("floors_num_"+5,0)!=0)
+//                    BUY.setText(getString(R.string.usebtn));
+//                else
+//                    BUY.setText(getString(R.string.buy));
+//                Number[0] = 5;
+//                NAME_VIEW.setText(floors_name[5]);
+//                CONTENT_VIEW.setText(floors_content[5]);
+//                PRICE_VIEW.setText(String.valueOf(floors_price[5]));
+//            }
+//        });
 
         BUY.setOnClickListener(new View.OnClickListener() {
             @Override

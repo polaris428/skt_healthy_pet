@@ -180,19 +180,19 @@ public class Shop_Closets_Fragment extends ShopValues {
                         .into(Item_View);
             }
         });
-        Slot6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(pref.getInt("closets_num_"+5,0)!=0)
-                    BUY.setText(getString(R.string.usebtn));
-                else
-                    BUY.setText(getString(R.string.buy));
-                Number[0] = 5;
-                NAME_VIEW.setText(closets_name[5]);
-                CONTENT_VIEW.setText(closets_content[5]);
-                PRICE_VIEW.setText(String.valueOf(closets_price[5]));
-            }
-        });
+//        Slot6.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(pref.getInt("closets_num_"+5,0)!=0)
+//                    BUY.setText(getString(R.string.usebtn));
+//                else
+//                    BUY.setText(getString(R.string.buy));
+//                Number[0] = 5;
+//                NAME_VIEW.setText(closets_name[5]);
+//                CONTENT_VIEW.setText(closets_content[5]);
+//                PRICE_VIEW.setText(String.valueOf(closets_price[5]));
+//            }
+//        });
 
         BUY.setOnClickListener(new View.OnClickListener() {
             @Override
