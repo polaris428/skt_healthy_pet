@@ -2,6 +2,7 @@
     <string name="app_name">skt healthy pet</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="enterinformation">정보 다시 입력</string>
+    <string name="name" translatable="false">펫의 이름을 입력해주세요</string>
     <string name="age" translatable="false">나이를 입력해주세요</string>
     <string name="high" translatable="false">키를 입력해주세요</string>
     <string name="kg" translatable="false">몸무게를 입력해주세요</string>
