@@ -37,15 +37,12 @@ public class List_Main_Fragment extends Fragment {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.fragment_list_main_, null);
         /* 위젯과 멤버변수 참조 획득 */
         mCon = container.getContext();
-        //binding setting
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_list_main_,container, false);
         mListView = v.findViewById(R.id.listView);
         SharedPreferences pref = mCon.getSharedPreferences("ListInventory", Activity.MODE_PRIVATE);
         ListValues.p = pref.getInt("Index", -1);
         /* 아이템 추가 및 어댑터 등록 */
         dataSetting();
-        Button btn = (Button) v.findViewById(R.id.add);
-        btn.setOnClickListener(this::pressAddBtn);
         v.findViewById(R.id.feb_list_main).setOnClickListener(this::pressAddBtn);
 
         return v;
