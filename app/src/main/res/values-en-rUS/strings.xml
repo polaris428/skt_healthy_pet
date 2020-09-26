@@ -33,12 +33,12 @@
     <string name="no" translatable="false">No</string>
     <string name="bought" translatable="false">Purchased!</string>
     <string name="already" translatable="false">This item is already in your possession!</string>
-    <string name="nomoney" translatable="false">You\'re short of money!</string>
+    <string name="nomoney" translatable="false">You don\'t have enough money.</string>
     <string name="use" translatable="false">Are you sure to use it?</string>
     <string name="used" translatable="false">Applied!</string>
     <string name="usebtn" translatable="false">Use</string>
 
-    <string name="exercise" translatable="false">Exercise recommended by HEALTY PET</string>
+    <string name="exercise" translatable="false">Recommended Exercise</string>
     <string name="squat" translatable="false">Squat</string>
     <string name="pushup" translatable="false">Push-up</string>
     <string name="plank" translatable="false">Plank</string>
@@ -47,4 +47,14 @@
     <string name="burpee" translatable="false">burpee(Noise Caution)</string>
 
     <string name="StringValue" translatable="false">Image won\'t open.</string>
+    <string name="get" translatable="false">GET!!!</string>
+    <string name="reword1" translatable="false">Tap the treasure chest to earn rewards</string>
+
+    <string name="coins" translatable="false">coins</string>
+
+
+    <string name="test1" translatable="false">Money increase</string>
+    <string name="test2" translatable="false">Level up</string>
+
+    <string name="backmore" trasnlatable="false">Press the back button one more time to exit.</string>
 </resources>

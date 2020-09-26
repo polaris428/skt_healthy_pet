@@ -48,14 +48,19 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_pedometer_, container, false);
 
+        // Inflate the layout for this fragment
+
+        view = inflater.inflate(R.layout.fragment_pedometer_, container, false);
+        TextView reword=(TextView)view.findViewById(R.id.reword);
         //센서 연결[걸음수 센서를 이용한 흔듬 감지]
         sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
         //accelerormeterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -68,38 +73,48 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
         mReset = view.findViewById(R.id.reset_btn);
         mwalknum = view.findViewById(R.id.walknum);
         //초기화 버튼 : 다시 숫자를 0으로 만들어준다.
+
+        if(mSteps>=1){
+            reword.setText(R.string.reword1);
+            mReset.setVisibility(View.VISIBLE);
+        }
+
         mReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 final SharedPreferences p = container.getContext().getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
                 final SharedPreferences.Editor e = p.edit();
                 final SharedPreferences p2 = container.getContext().getSharedPreferences("Infomation", Activity.MODE_PRIVATE);
                 final SharedPreferences.Editor e2 = p2.edit();
+
+                reword.setText(Integer.toString(mSteps/10)+(getString(R.string.get)));
                 e.putInt("money", p.getInt("money", 0)+mSteps/10);
                 e2.putInt("exp",p2.getInt("exp",0)+mSteps/50);
                 e.commit();
                 e2.commit();
-                mSteps = 0;
-                mCounterSteps = 0;
                 mwalknum.setText(Integer.toString(mSteps));
+                mReset.setVisibility(View.INVISIBLE);
+                mSteps=0;
+                mCounterSteps=0;
             }
         });
 
         return view;
     }
-        public void onStart () {
-            super.onStart();
-            if (stepCountSensor != null) {
-                sensorManager.registerListener(this,stepCountSensor,SensorManager.SENSOR_DELAY_GAME);
-            }
+    public void onStart () {
+        super.onStart();
+        if (stepCountSensor != null) {
+            sensorManager.registerListener(this,stepCountSensor,SensorManager.SENSOR_DELAY_GAME);
         }
+    }
 
-        public void onStop () {
-            super.onStop();
-            if (sensorManager != null) {
-                sensorManager.unregisterListener(this);
-            }
+    public void onStop () {
+        super.onStop();
+        if (sensorManager != null) {
+            sensorManager.unregisterListener(this);
         }
+    }
 
 
     @Override
@@ -115,10 +130,10 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
             mSteps = (int) sensorEvent.values[0] - mCounterSteps;
             mwalknum.setText(Integer.toString(mSteps));
             Log.i("log: ", "New step detected by STEP_COUNTER sensor. Total step count: " + mSteps );
+        }
+
+
     }
-
-
-}
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {
