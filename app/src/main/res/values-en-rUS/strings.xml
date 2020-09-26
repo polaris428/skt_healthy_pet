@@ -45,12 +45,6 @@
     <string name="walking" translatable="false">Walking(Noise Caution)</string>
     <string name="lunge" translatable="false">Lunge</string>
     <string name="burpee" translatable="false">burpee(Noise Caution)</string>
-    <string name="get" translatable="false">GET!!!</string>
-    <string name="reword1" translatable="false">Tap the treasure chest to earn rewards</string>
+
     <string name="StringValue" translatable="false">Image won\'t open.</string>
-    <string name="coins" translatable="false">coins</string>
-
-
-    <string name="test1" translatable="false">Money increase or decrease</string>
-    <string name="test2" translatable="false">Level increase or decrease</string>
 </resources>

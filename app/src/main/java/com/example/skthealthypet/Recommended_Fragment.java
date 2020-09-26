@@ -30,7 +30,7 @@ public class Recommended_Fragment extends Fragment {
         itemList.clear();
         prepareData();
         //recyclerview
-        recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
+        recyclerView = v.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         mAdapter = new aAdapter(itemList);
 
