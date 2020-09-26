@@ -68,21 +68,18 @@ public class Pedometer_Fragment extends Fragment  implements SensorEventListener
         mReset = view.findViewById(R.id.reset_btn);
         mwalknum = view.findViewById(R.id.walknum);
         //초기화 버튼 : 다시 숫자를 0으로 만들어준다.
-        mReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final SharedPreferences p = container.getContext().getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
-                final SharedPreferences.Editor e = p.edit();
-                final SharedPreferences p2 = container.getContext().getSharedPreferences("Infomation", Activity.MODE_PRIVATE);
-                final SharedPreferences.Editor e2 = p2.edit();
-                e.putInt("money", p.getInt("money", 0)+mSteps/10);
-                e2.putInt("exp",p2.getInt("exp",0)+mSteps/50);
-                e.commit();
-                e2.commit();
-                mSteps = 0;
-                mCounterSteps = 0;
-                mwalknum.setText(Integer.toString(mSteps));
-            }
+        mReset.setOnClickListener(v -> {
+            SharedPreferences p = container.getContext().getSharedPreferences("Inventory", Activity.MODE_PRIVATE);
+            SharedPreferences.Editor e = p.edit();
+            SharedPreferences p2 = container.getContext().getSharedPreferences("Infomation", Activity.MODE_PRIVATE);
+            SharedPreferences.Editor e2 = p2.edit();
+            e.putInt("money", p.getInt("money", 0)+mSteps/10);
+            e2.putInt("exp",p2.getInt("exp",0)+mSteps/50);
+            e.commit();
+            e2.commit();
+            mSteps = 0;
+            mCounterSteps = 0;
+            mwalknum.setText(Integer.toString(mSteps));
         });
 
         return view;

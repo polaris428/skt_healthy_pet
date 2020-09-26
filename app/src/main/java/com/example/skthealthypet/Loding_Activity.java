@@ -20,28 +20,26 @@ public class Loding_Activity extends AppCompatActivity {
         SharedPreferences pref = getSharedPreferences("Inventory" , Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
 
-        mHandler.postDelayed(new Runnable()  {
-            public void run() {
+        mHandler.postDelayed(() -> {
 
-                if (CheckAppFirstExecute()) {
-                    editor.putInt("money", 0);
-                    for (int i = 0; i < 6; i++) {
-                        editor.putInt("hats_num_" + i, 0);
-                        editor.putInt("beds_num_" + i, 0);
-                        editor.putInt("closets_num_" + i, 0);
-                        editor.putInt("walls_num_" + i, 0);
-                        editor.putInt("floors_num_" + i, 0);
-                    }
-                    editor.commit();
-                    Intent intent=new Intent(Loding_Activity.this,Input_Activity.class);
-                    startActivity(intent);
-                    finish();
+            if (CheckAppFirstExecute()) {
+                editor.putInt("money", 0);
+                for (int i = 0; i < 6; i++) {
+                    editor.putInt("hats_num_" + i, 0);
+                    editor.putInt("beds_num_" + i, 0);
+                    editor.putInt("closets_num_" + i, 0);
+                    editor.putInt("walls_num_" + i, 0);
+                    editor.putInt("floors_num_" + i, 0);
                 }
-                else{
-                    Intent intent=new Intent(Loding_Activity.this,MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
+                editor.commit();
+                Intent intent=new Intent(Loding_Activity.this,Input_Activity.class);
+                startActivity(intent);
+                finish();
+            }
+            else{
+                Intent intent=new Intent(Loding_Activity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         }, 3000);
     }
@@ -50,5 +48,8 @@ public class Loding_Activity extends AppCompatActivity {
         SharedPreferences pref = getSharedPreferences("IsFirst" , Activity.MODE_PRIVATE);
         boolean isFirst = pref.getBoolean("isFirst", false);
         return !isFirst;
+    }
+    @Override
+    public void onBackPressed() {
     }
 }

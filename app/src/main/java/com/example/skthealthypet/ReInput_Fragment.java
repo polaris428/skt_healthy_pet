@@ -27,35 +27,29 @@ public class ReInput_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.fragment_re_input_, null);
         final FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        final EditText ageinput=(EditText)v.findViewById(R.id.ageinput);
-        final  EditText heightinput=(EditText)v.findViewById(R.id.heightinput);
-        final EditText kginput=(EditText)v.findViewById(R.id.kginput);
-        final EditText nameinput=v.findViewById(R.id.nameinput);
-        Button complete=(Button)v.findViewById(R.id.complete);
+        final EditText ageinput=v.findViewById(R.id.ageinput);
+        final  EditText heightinput=v.findViewById(R.id.heightinput);
+        final EditText kginput=v.findViewById(R.id.kginput);
+        Button complete=v.findViewById(R.id.complete);
         Context mcon = container.getContext();
         final SharedPreferences pref = mcon.getSharedPreferences("Infomation", Activity.MODE_PRIVATE);
         final SharedPreferences.Editor editor = pref.edit();
 
-        complete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String age=ageinput.getText().toString();
-                String height=heightinput.getText().toString();
-                String weight=kginput.getText().toString();
-                String name=nameinput.getText().toString();
+        complete.setOnClickListener(view -> {
+            String age=ageinput.getText().toString();
+            String height=heightinput.getText().toString();
+            String weight=kginput.getText().toString();
 
-                if(!age.isEmpty()&&!height.isEmpty()&&!weight.isEmpty()&&!name.isEmpty()){
-                    editor.putString("PetName",name);
-                    editor.putString("Height",height);
-                    editor.putString("Weight",weight);
-                    editor.putString("Age",age);
-                    editor.commit();
-                    Pet_Fragment Pet_Fragment = new Pet_Fragment();
-                    transaction.replace(R.id.framlayout, Pet_Fragment ).commitAllowingStateLoss();
-                }
-                else
-                    Toast.makeText(mcon, getString(R.string.fiilall), Toast.LENGTH_SHORT).show();
+            if(!age.isEmpty()&&!height.isEmpty()&&!weight.isEmpty()){
+                editor.putString("Height",height);
+                editor.putString("Weight",weight);
+                editor.putString("Age",age);
+                editor.commit();
+                Pet_Fragment Pet_Fragment = new Pet_Fragment();
+                transaction.replace(R.id.framlayout, Pet_Fragment ).commitAllowingStateLoss();
             }
+            else
+                Toast.makeText(mcon, getString(R.string.fiilall), Toast.LENGTH_SHORT).show();
         });
 
         return v;

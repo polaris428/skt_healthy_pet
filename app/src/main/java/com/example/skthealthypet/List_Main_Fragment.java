@@ -22,7 +22,6 @@ public class List_Main_Fragment extends Fragment {
     public List_Main_Fragment() {
         // Required empty public constructor
     }
-
     public static Context mCon;
     private ListView mListView;
     static int opend = 0;
@@ -54,7 +53,7 @@ public class List_Main_Fragment extends Fragment {
 
         final SharedPreferences pref = mCon.getSharedPreferences("ListInventory", Activity.MODE_PRIVATE);
         String inName, inContent;
-        Boolean isDaily;
+        boolean isDaily;
         if (opend == 0) {
             for (int i = 0; i <= pref.getInt("Index", -10); i++) {
                 inName = pref.getString("NAME_" + i, "ERROR");
