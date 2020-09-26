@@ -36,11 +36,6 @@ public class Pet_Fragment extends Fragment {
         ImageView GAGU = v.findViewById(R.id.GAGU);
         ImageView BED = v.findViewById(R.id.BED);
         ImageView PET = v.findViewById(R.id.Pet);
-        if(pref2.getInt("level", 0)==0){
-            SharedPreferences.Editor e = pref2.edit();
-            e.putInt("level", pref2.getInt("level", 0) + 1);
-            e.commit();
-        }
         if (pref2.getInt("exp", 0) >= 500) {
             SharedPreferences.Editor e = pref2.edit();
             e.putInt("level", pref2.getInt("level", 0) + 1);
@@ -51,43 +46,62 @@ public class Pet_Fragment extends Fragment {
         NAME_VIEW.setText(pref2.getString("PetName", "ERROR"));
 
 
-        if (pref2.getInt("level", 0) == 1 && pref2.getInt("DogOrCat", 0) == 1) {
-            Glide.with(c.getApplicationContext())
-                    .asBitmap()
-                    .load(R.drawable.dog1)
-                    .into(PET);
+        if(pref2.getInt("DogOrCat",0)==1){
             NAME_VIEW.setBackgroundResource(R.drawable.dogname);
+            if (pref2.getInt("level", 0) == 1) {
+                Glide.with(c.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.dog1)
+                        .into(PET);
+            }
+            else if (pref2.getInt("level", 0) == 2) {
+                Glide.with(c.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.dog2)
+                        .into(PET);
+            }
+            else if (pref2.getInt("level", 0) == 3) {
+                Glide.with(c.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.dog33)
+                        .into(PET);
+            }
+            else {
+                Glide.with(c.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.dog4)
+                        .into(PET);
+            }
         }
-        else if (pref2.getInt("level", 0) == 2 && pref2.getInt("DogOrCat", 0) == 1) {
-            PET.setImageResource(R.drawable.dog2);
-
-        }
-        else if (pref2.getInt("level", 0) == 3 && pref2.getInt("DogOrCat", 0) == 1) {
-            PET.setImageResource(R.drawable.dog33);
-        }
-        else if (pref2.getInt("level", 0) >= 4 && pref2.getInt("DogOrCat", 0) == 1) {
-            PET.setImageResource(R.drawable.dog4);
-        }
-
-        else if (pref2.getInt("DogOrCat", 0) == 2&&pref2.getInt("level", 0) == 1) {
-            Glide.with(c.getApplicationContext())
-                    .asBitmap()
-                    .load(R.drawable.cat1)
-                    .into(PET);
+        else if(pref.getInt("DogOrCat",0)==2){
             NAME_VIEW.setBackgroundResource(R.drawable.catname);
+            if (pref2.getInt("level", 0) == 1) {
+                Glide.with(c.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.cat1)
+                        .into(PET);
+            }
+            else if (pref2.getInt("level", 0) == 2) {
+                Glide.with(c.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.cat2)
+                        .into(PET);
+            }
+            else if (pref2.getInt("level", 0) == 3) {
+                Glide.with(c.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.cat3)
+                        .into(PET);
+            }
+            else {
+                Glide.with(c.getApplicationContext())
+                        .asBitmap()
+                        .load(R.drawable.cat4)
+                        .into(PET);
+            }
         }
-        else if (pref2.getInt("level", 0) == 2 && pref2.getInt("DogOrCat", 0) == 2) {
-                PET.setImageResource(R.drawable.cat2);
 
-        }
-        else if (pref2.getInt("level", 0) == 3 && pref2.getInt("DogOrCat", 0) == 2) {
-                PET.setImageResource(R.drawable.cat3);
-        }
-        else if (pref2.getInt("level", 0) >= 4 && pref2.getInt("DogOrCat", 0) == 2) {
-                PET.setImageResource(R.drawable.cat4);
-        }
-
-            int i;
+        int i;
             for (i = 0; i < 6; i++)
                 if (pref.getInt("beds_num_" + i, 0) == 2)
                     break;

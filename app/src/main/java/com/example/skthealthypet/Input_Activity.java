@@ -29,7 +29,7 @@ public class Input_Activity extends AppCompatActivity {
         final SharedPreferences pref = getSharedPreferences("Infomation", Activity.MODE_PRIVATE);
         final SharedPreferences.Editor editor = pref.edit();
         editor.putInt("exp",0);
-        editor.putInt("level",0);
+        editor.putInt("level",1);
         editor.commit();
         complete.setOnClickListener(view -> {
             String age=ageinput.getText().toString();

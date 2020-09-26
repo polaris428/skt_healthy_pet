@@ -25,7 +25,6 @@
                 android:layout_height="77dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/dogname"
                 android:fontFamily="@font/apple_sd_gothic_neo_r"
                 android:gravity="center"
                 android:text=""
