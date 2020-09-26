@@ -51,7 +51,7 @@ public class Pet_Fragment extends Fragment {
         NAME_VIEW.setText(pref2.getString("PetName", "ERROR"));
 
 
-        if (pref2.getInt("DogOrCat", 0) == 1 && pref2.getInt("DogOrCat", 0) == 0) {
+        if (pref2.getInt("level", 0) == 1 && pref2.getInt("DogOrCat", 0) == 1) {
             Glide.with(c.getApplicationContext())
                     .asBitmap()
                     .load(R.drawable.dog1)
