@@ -20,7 +20,7 @@
         android:title=""
         android:icon="@drawable/ic_launcher_background">
 
-        
+
     </item>
     <item
         android:id="@+id/four"
